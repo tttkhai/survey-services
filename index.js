@@ -4,7 +4,7 @@ const keys = require('./config/keys');
 const passport = require('passport');
 const cookieSession = require('cookie-session');
 const PORT = process.env.PORT || 5000;
-// require('./db/db')(mongoose);
+require('./db/db')(mongoose);
 require('./models/User');
 require('./services/passport');
 
