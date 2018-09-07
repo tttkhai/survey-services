@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 5000;
 require('./db/db')(mongoose);
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 const app = express();
@@ -23,6 +24,7 @@ app.use(passport.session());
 
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 if(process.env.NODE_ENV === 'production'){
     app.use(express.static('client/build'));
