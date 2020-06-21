@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import _ from 'lodash';
 import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom';
-import validateEmails from "../../utils/functions";
+import validateEmails from "../../utils/validateEmails";
 import SurveyField from './SurveyField';
 import FIELDS from './form';
 
